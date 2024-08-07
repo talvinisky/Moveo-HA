@@ -6,7 +6,7 @@
 ## the ec2 instance is protected by an application load balancer
 ## Please keep in mind that this project does not include the registration of the ACM certificate due to known issues with Terraform's handling of ACM certificate validation. You will need to manually request and validate the ACM certificate in the AWS Management Console and then reference the ARN of the validated certificate in the terraform.tfvars file. The main reason to do it is for security reasons,an ALB that uses https is much more secure. 
 
-# to use the project first configure AWS CLI:
+# To use the project first configure AWS CLI:
 - ```aws configure```
 
 # Clone the Repository:

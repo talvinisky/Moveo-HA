@@ -1,42 +1,49 @@
 variable "aws_region" {
-  description = "The AWS region to deploy resources"
+  description = "The AWS region to deploy to"
   type        = string
-  default     = "eu-central-1"
 }
 
 variable "vpc_cidr" {
-  description = "CIDR block for the VPC"
+  description = "The CIDR block for the VPC"
   type        = string
-  default     = "10.0.0.0/16"
 }
 
-variable "public_subnet_cidr" {
-  description = "CIDR block for the public subnet"
-  type        = string
-  default     = "10.0.1.0/24"
+variable "public_subnet_cidrs" {
+  description = "The CIDR blocks for the public subnets"
+  type        = list(string)
 }
 
-variable "private_subnet_cidr" {
-  description = "CIDR block for the private subnet"
-  type        = string
-  default     = "10.0.2.0/24"
+variable "private_subnet_cidrs" {
+  description = "The CIDR blocks for the private subnets"
+  type        = list(string)
 }
 
-variable "instance_type" {
-  description = "EC2 instance type"
-  type        = string
-  default     = "t2.micro"
+variable "availability_zones" {
+  description = "The availability zones for the subnets"
+  type        = list(string)
 }
 
 variable "ami_id" {
-  description = "AMI ID for the EC2 instance"
+  description = "The AMI ID for the EC2 instance"
   type        = string
-  default     = "ami-013efd7d9f40467af"
+}
+
+variable "instance_type" {
+  description = "The instance type for the EC2 instance"
+  type        = string
 }
 
 variable "key_name" {
-  description = "Key pair name"
+  description = "The key name for the EC2 instance"
   type        = string
-  default     = "key-pair"
 }
 
+variable "domain_name" {
+  description = "The domain name for the Route 53 record"
+  type        = string
+}
+
+variable "zone_id" {
+  description = "The Route 53 Hosted Zone ID"
+  type        = string
+}

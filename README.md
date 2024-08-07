@@ -42,6 +42,7 @@ once you checked everything is in order execute the apply command:
 
 #Terraform Destroy:
 To clean up the resources created by Terraform:
+
 -```Terraform Destroy```
 
 

@@ -3,8 +3,8 @@
 ### This project was done as a part of my application process to moveo.
 ### This project aims to levrege terraform and docker to create an inferstrcture that sets up a secure custom ngnix container on an ec2 instance 
 
-## the ec2 instance is protected by an application load balancer
-## Please keep in mind that this project does not include the registration of the ACM certificate due to known issues with Terraform's handling of ACM certificate validation. You will need to manually request and validate the ACM certificate in the AWS Management Console and then reference the ARN of the validated certificate in the terraform.tfvars file. The main reason to do it is for security reasons,an ALB that uses https is much more secure. 
+# the ec2 instance is protected by an application load balancer
+# Please keep in mind that this project does not include the registration of the ACM certificate due to known issues with Terraform's handling of ACM certificate validation. You will need to manually request and validate the ACM certificate in the AWS Management Console and then reference the ARN of the validated certificate in the terraform.tfvars file. The main reason to do it is for security reasons,an ALB that uses https is much more secure. 
 
 # To use the project first configure AWS CLI:
 - ```aws configure```
